@@ -5,6 +5,8 @@
 
 import os
 import json
+import random
+import numpy as np
 import torch
 from typing import Dict, Any
 import matplotlib.pyplot as plt
@@ -142,9 +144,7 @@ def set_seed(seed: int = 42) -> None:
     """
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
-    import numpy as np
     np.random.seed(seed)
-    import random
     random.seed(seed)
     # 确保卷积算法的确定性
     torch.backends.cudnn.deterministic = True

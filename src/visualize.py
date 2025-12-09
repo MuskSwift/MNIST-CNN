@@ -182,6 +182,7 @@ def plot_model_structure(model_type: str, save_path: str):
         save_path: 保存路径
     """
     try:
+        # torchinfo 是可选依赖，在 try 块中导入以优雅处理缺失情况
         from torchinfo import summary
         
         model = get_model(model_type=model_type)
