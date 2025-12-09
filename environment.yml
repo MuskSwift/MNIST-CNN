@@ -1,0 +1,16 @@
+name: mnist-cnn
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pytorch>=1.10
+  - torchvision>=0.11
+  - numpy>=1.21
+  - matplotlib>=3.5
+  - seaborn>=0.11
+  - scikit-learn>=1.0
+  - pip
+  - pip:
+    - torchinfo>=1.7
