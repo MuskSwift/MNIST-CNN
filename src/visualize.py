@@ -141,7 +141,7 @@ def plot_error_samples(error_analysis_path: str, save_path: str, num_samples: in
     rows = (num_samples + cols - 1) // cols
     
     fig, axes = plt.subplots(rows, cols, figsize=(15, 3 * rows))
-    axes = axes.flatten() if num_samples > 1 else [axes]
+    axes = axes.flatten() if rows * cols > 1 else [axes]
     
     for idx in range(num_samples):
         ax = axes[idx]
